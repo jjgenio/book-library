@@ -1,0 +1,13 @@
+<form class="add-book-form">
+    <h4>Add new book</h4>
+    <!-- Generates form accordingly to the model list -->
+    <mat-form-field appearance="fill" *ngFor="let field of formFields">
+        <mat-label>{{field.label}}</mat-label>
+        <input matInput [formControl]="getFormControl(field.name)">
+        <mat-error *ngIf="getFormControl(field.name).invalid">{{getErrorMessage(field.name)}}</mat-error>
+    </mat-form-field>
+</form>
+<!-- Add button -->
+<div class="btn-container">
+    <button mat-raised-button color="primary" (click)="addBook()" [disabled]="!this.bookForm.valid">Add</button>
+</div>

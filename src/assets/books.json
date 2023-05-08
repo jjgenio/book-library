@@ -1,0 +1,19 @@
+{
+    "items": [
+        {
+            "title": "Star Wars: Episode I",
+            "author": "George Lucas",
+            "publicationDate": "1999"
+        },
+        {
+            "title": "Finite and Infinite Games",
+            "author": "James P. Carse",
+            "publicationDate": "1986"
+        },
+        {
+            "title": "Game of Thrones: A Clash of Kings",
+            "author": "George R. R. Martin",
+            "publicationDate": "1998"
+        }
+    ]
+}
