@@ -1,14 +1,14 @@
 <mat-selection-list #book [multiple]="false">
-    <!-- Generates list accordingly to the model list -->
-    <mat-list-option *ngFor="let book of books" [value]="book">
-        <div>
-            <span class="title">{{book.title}}</span>
-            <span class="detail">{{book.author}}</span>
-            <span class="detail">{{book.publicationDate}}</span>
-        </div>
-        <!-- Delete button item -->
-        <div class="btn-delete" (click)="removeBook(book.title)">
-            <fa-icon [icon]="faTrash"></fa-icon>
-        </div>
-    </mat-list-option>
+  <!-- Generates list accordingly to the model list -->
+  <mat-list-option *ngFor="let book of books" [value]="book">
+    <div>
+      <span class="title">{{ book.title }}</span>
+      <span class="detail">{{ book.author }}</span>
+      <span class="detail">{{ book.publicationDate }}</span>
+    </div>
+    <!-- Delete button item -->
+    <div class="btn-delete" (click)="removeBook(book.title)">
+      <fa-icon [icon]="faTrash"></fa-icon>
+    </div>
+  </mat-list-option>
 </mat-selection-list>

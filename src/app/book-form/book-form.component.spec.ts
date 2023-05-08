@@ -17,11 +17,10 @@ describe('BookFormComponent', () => {
         MatInputModule,
         MatButtonModule,
         ReactiveFormsModule,
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
       ],
-      declarations: [ BookFormComponent ]
-    })
-    .compileComponents();
+      declarations: [BookFormComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -89,6 +88,8 @@ describe('BookFormComponent', () => {
     authorControl.setValue('Test Author');
     publicationDateControl.setValue('2030');
 
-    expect(component.getErrorMessage('publicationDate')).toBe('Published year must not be a future year');
+    expect(component.getErrorMessage('publicationDate')).toBe(
+      'Published year must not be a future year'
+    );
   });
 });

@@ -5,20 +5,16 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-book-list',
   templateUrl: './book-list.component.html',
-  styleUrls: ['./book-list.component.sass']
+  styleUrls: ['./book-list.component.sass'],
 })
-export class BookListComponent implements OnInit {
+export class BookListComponent {
   @Input() books: ReadonlyArray<Book> = [];
   @Output() remove = new EventEmitter<string>();
   faTrash = faTrash;
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  constructor() {}
 
   removeBook(title: string) {
     this.remove.emit(title);
   }
-
 }

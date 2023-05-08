@@ -4,7 +4,11 @@ import { BooksActions } from './books.actions';
 
 describe('BooksActions', () => {
   it('should create the Add Book action', () => {
-    const book: Book = { title: 'Book 1', author: 'Author 1', publicationDate: '1880' };
+    const book: Book = {
+      title: 'Book 1',
+      author: 'Author 1',
+      publicationDate: '1880',
+    };
     const expectedAction = createAction(
       '[Books] Add Book',
       props<{ book: Book }>()

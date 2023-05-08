@@ -1,2 +1,4 @@
-<app-book-list [books]="(books$ | async)!" (remove)="onRemove($event)"></app-book-list>
+<app-book-list
+  [books]="(books$ | async)!"
+  (remove)="onRemove($event)"></app-book-list>
 <app-book-form (add)="onAdd($event)"></app-book-form>

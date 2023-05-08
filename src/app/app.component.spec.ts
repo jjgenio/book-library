@@ -14,11 +14,7 @@ import { MatListModule } from '@angular/material/list';
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [
-        AppComponent,
-        BookListComponent,
-        BookFormComponent
-      ],
+      declarations: [AppComponent, BookListComponent, BookFormComponent],
       imports: [
         HttpClientTestingModule,
         StoreModule.forRoot({ books: booksReducer }),
@@ -26,8 +22,8 @@ describe('AppComponent', () => {
         MatButtonModule,
         ReactiveFormsModule,
         BrowserAnimationsModule,
-        MatListModule
-      ]
+        MatListModule,
+      ],
     }).compileComponents();
   });
 

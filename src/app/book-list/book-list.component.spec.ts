@@ -6,7 +6,7 @@ import { MatListModule } from '@angular/material/list';
 import { BookListComponent } from './book-list.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
-@Component({selector: 'app-book', template: ''})
+@Component({ selector: 'app-book', template: '' })
 class MockBookComponent {
   @Input()
   book!: Book;
@@ -19,10 +19,9 @@ describe('BookListComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BookListComponent, MockBookComponent ],
-      imports: [ MatListModule, FontAwesomeModule ]
-    })
-    .compileComponents();
+      declarations: [BookListComponent, MockBookComponent],
+      imports: [MatListModule, FontAwesomeModule],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -36,7 +35,11 @@ describe('BookListComponent', () => {
   });
 
   it('should display a list of books', () => {
-    const book: Book = { title: 'Book 1', author: 'Author 1', publicationDate: '1880' };
+    const book: Book = {
+      title: 'Book 1',
+      author: 'Author 1',
+      publicationDate: '1880',
+    };
     component.books = [book];
     fixture.detectChanges();
     const compiled = fixture.nativeElement;

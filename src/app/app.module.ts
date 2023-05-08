@@ -14,11 +14,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    BookListComponent,
-    BookFormComponent
-  ],
+  declarations: [AppComponent, BookListComponent, BookFormComponent],
   imports: [
     BrowserModule,
     StoreModule.forRoot({ books: booksReducer }),
@@ -28,9 +24,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatButtonModule,
     FontAwesomeModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

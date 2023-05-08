@@ -5,9 +5,21 @@ import { booksReducer } from './books.reducer';
 describe('booksReducer', () => {
   const initialState: ReadonlyArray<Book> = [];
 
-  const book1: Book = { title: 'Book 1', author: 'Author 1', publicationDate: '1880' };
-  const book2: Book = { title: 'Book 2', author: 'Author 2', publicationDate: '1995' };
-  const book3: Book = { title: 'Book 3', author: 'Author 3', publicationDate: '2010' };
+  const book1: Book = {
+    title: 'Book 1',
+    author: 'Author 1',
+    publicationDate: '1880',
+  };
+  const book2: Book = {
+    title: 'Book 2',
+    author: 'Author 2',
+    publicationDate: '1995',
+  };
+  const book3: Book = {
+    title: 'Book 3',
+    author: 'Author 3',
+    publicationDate: '2010',
+  };
 
   it('should return the default state', () => {
     const action = { type: 'Unknown' } as any;
